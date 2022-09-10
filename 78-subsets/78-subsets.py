@@ -1,5 +1,6 @@
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
+        # 这个用for循环的方法更加通用
         results = []
         subset = []
         if not nums:
