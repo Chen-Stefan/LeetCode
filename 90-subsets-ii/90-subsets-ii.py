@@ -14,6 +14,7 @@ class Solution:
         results.append(subset[:])
         
         for index in range(startIndex, len(nums)):
+            # 去重的精髓在此
             if (index != 0 and nums[index] == nums[index - 1] and index > startIndex):
                 continue
             subset.append(nums[index])
