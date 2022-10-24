@@ -3,8 +3,6 @@ class Solution:
         """
         Do not return anything, modify nums1 in-place instead.
         """
-        if not nums2:
-            return 
         temp = [0 for _ in range(m + n)]
         first_index, second_index, temp_index = 0, 0, 0         
         while first_index <= m - 1 and second_index <= n - 1:
