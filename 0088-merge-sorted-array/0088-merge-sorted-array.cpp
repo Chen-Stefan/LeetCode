@@ -6,33 +6,27 @@ public:
         while (first_index <= m - 1 && second_index <= n - 1) 
         {
             if (nums1[first_index] <= nums2[second_index]) 
-            {   temp[temp_index] = nums1[first_index];
-                temp_index++;
-                first_index++;
+            {   
+                temp[temp_index++] = nums1[first_index++];
             }
             else
             {
-                temp[temp_index] = nums2[second_index];
-                temp_index++;
-                second_index++; 
+                temp[temp_index++] = nums2[second_index++];
             }
         }
         
         while (first_index <= m - 1)
         {
-            temp[temp_index] = nums1[first_index];
-            first_index++;
-            temp_index++;
+            temp[temp_index++] = nums1[first_index++];
         }
         while (second_index <= n - 1)
         {
-            temp[temp_index] = nums2[second_index];
-            second_index++;
-            temp_index++;
+            temp[temp_index++] = nums2[second_index++];
         }
-        for (int index = 0; index < m + n; index++)
+        int index = 0;
+        for (int val : temp)
         {
-            nums1[index] = temp[index];
+            nums1[index++] = val;
         }
     }
 };
